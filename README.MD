@@ -89,3 +89,114 @@ The *I2Connect: Buttons* module uses a default I2C address of:
 
 ```text
 0x59
+```
+This address can be reconfigured to 0x58, 0x5A, or 0x5B by modifying the AD0 and AD1 solder jumpers on the back of the PCB.
+
+If more than four Button modules are required in the same system, an I2C multiplexer can be used. The PTSolns I2Connect: MUX module provides four independent I2C channels, allowing extended expansion without address collisions.
+
+---
+
+## *PTSolns IDE*
+
+The [*PTSolns IDE*](https://ptsolns.com/ide) is a free desktop application for programming PTSolns microcontroller development boards and compatible Arduino platforms.
+
+This library is available directly through both the PTSolns IDE Library Manager and the Arduino Library Manager.
+
+To install:
+
+1. Open the PTSolns IDE (or Arduino IDE).
+2. Open the Library Manager.
+3. Search for:
+
+```text
+I2Connect_Buttons
+```
+4. Click Install.
+
+Features of the [*PTSolns IDE*](https://ptsolns.com/ide) include:
+
+* Integrated board management
+* Built in serial monitor
+* Library management
+* Example project browser
+* Support for over 8,500 third party libraries
+* Built in CH340 USB driver support
+* Open source and community driven
+
+The [*PTSolns IDE*](https://ptsolns.com/ide) can be used alongside the Arduino IDE and supports many PTSolns development boards out of the box.
+
+---
+
+## Quick Start
+
+```cpp
+#include <Wire.h>
+#include <PTSolns_I2Connect_Buttons.h>
+
+PTSolns_I2Connect_Buttons buttons;
+
+void setup()
+{
+    Serial.begin(115200);
+    Wire.begin();
+
+    if (buttons.begin()) {
+        Serial.println("Buttons initialized!");
+    } else {
+        Serial.println("Failed to find module.");
+        while(1);
+    }
+}
+
+void loop()
+{
+    // Check if a specific button is physically pressed
+    if (buttons.isPressed(BUTTON_A1)) {
+        Serial.println("Button A1 is pressed.");
+    }
+    
+    if (buttons.isPressed(BUTTON_D4)) {
+        Serial.println("Button D4 is pressed.");
+    }
+    
+    delay(100);
+}
+```
+
+---
+## Basic Functions
+Initialization
+
+```cpp
+// Initializes the button board at the default 0x59 address
+buttons.begin();
+```
+Reading Data
+```cpp
+// Check a single button state using the silkscreen macro
+if (buttons.isPressed(BUTTON_B2)) {
+    // Execute action
+}
+
+// Read the state of all 16 buttons simultaneously
+uint16_t allButtons = buttons.readAll();
+```
+---
+
+## Library Functions
+
+| Function          | Description                              |
+| ----------------- | -----------------------------------------|
+| begin()           | Initialize the I2C bus and configure AW9523B IC registers          |
+| isPressed()         | Check if a specific logical button ID is currently pressed|
+| isReleased()       |Check if a specific logical button ID is currently released|
+| readAll()       |Retrieve a 16-bit integer reflecting the entire matrix state|
+
+---
+
+## Typical Applications
+
+
+
+
+---
