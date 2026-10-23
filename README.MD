@@ -165,13 +165,13 @@ void loop()
 
 ---
 ## Basic Functions
-Initialization
+##Initialization
 
 ```cpp
 // Initializes the button board at the default 0x59 address
 buttons.begin();
 ```
-Reading Data
+##Reading Data
 ```cpp
 // Check a single button state using the silkscreen macro
 if (buttons.isPressed(BUTTON_B2)) {
