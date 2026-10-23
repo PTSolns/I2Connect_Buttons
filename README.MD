@@ -1,16 +1,16 @@
-# PTSolns *I2Connect: Buttons * Library
+# PTSolns *I2Connect: Buttons* Library
 
 ![Arduino Library](https://img.shields.io/badge/Arduino-Library-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Input](https://img.shields.io/badge/Input-16__Button__Matrix-orange)
 
-Library for the PTSolns *I2Connect: Buttons * module. Available through both the Arduino Library Manager and the PTSolns IDE Library Manager, this library provides seamless interaction with the 16-button matrix, translating complex hardware pin routing into a clean, sequential logical interface.
+Library for the PTSolns *I2Connect: Buttons* module. Available through both the Arduino Library Manager and the PTSolns IDE Library Manager, this library provides seamless interaction with the 16-button matrix, translating complex hardware pin routing into a clean, sequential logical interface.
 
 ---
 
 ## Overview
 
-The *I2Connect: Buttons * is a compact user-input module featuring 16 tactile pushbuttons arranged in a 4x4 matrix labeled A1 through D4. Driven by an onboard AW9523B I2C GPIO expander[cite: 5], this module provides an immediate, reliable hardware interface for embedded systems without consuming numerous microcontroller pins.
+The *I2Connect: Buttons* is a compact user-input module featuring 16 tactile pushbuttons arranged in a 4x4 matrix labeled A1 through D4. Driven by an onboard AW9523B I2C GPIO expander, this module provides an immediate, reliable hardware interface for embedded systems without consuming numerous microcontroller pins.
 
 The module communicates over the industry standard I2C interface and features a dedicated INT (Interrupt) pin. This allows for an event-driven architecture where the microcontroller is only notified the exact moment a button is pressed, eliminating the need for resource-heavy constant I2C polling. The board is fully 3.3/5V rated for compatibility across standard microcontroller logic levels. 
 
@@ -43,7 +43,7 @@ The following modules are part of the *I2Connect* Series:
 ## Key Features
 
 - 16 tactile pushbuttons configured in a 4x4 matrix (A1 to D4).
-- Driven by the AW9523B IC[cite: 5].
+- Driven by the AW9523B IC.
 - Hardware INT (Interrupt) output pin for event-driven logic.
 - Default I2C address of 0x59.
 - 3.3V and 5V logic and power compatibility.
@@ -54,7 +54,7 @@ The following modules are part of the *I2Connect* Series:
 
 ## I2Connect Ecosystem
 
-The *I2Connect: Buttons * is part of the PTSolns I2Connect ecosystem.
+The *I2Connect: Buttons* is part of the PTSolns I2Connect ecosystem.
 
 All *I2Connect* modules utilize a standardized 4 pin JST SH 1.0 mm connector carrying:
 
@@ -71,7 +71,7 @@ For maximum compatibility, the module also includes a preinstalled angled male h
 
 ---
 
-## Buttons  Specifications
+## Buttons Specifications
 
 | Parameter               | Value                               |
 | ----------------------- | ----------------------------------- |
@@ -85,7 +85,7 @@ For maximum compatibility, the module also includes a preinstalled angled male h
 
 ## I2C Addressing & Multiplexing
 
-The *I2Connect: Buttons * module uses a default I2C address of:
+The *I2Connect: Buttons* module uses a default I2C address of:
 
 ```text
 0x59
