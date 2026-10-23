@@ -196,7 +196,45 @@ uint16_t allButtons = buttons.readAll();
 
 ## Typical Applications
 
-
-
+* Embedded system menu navigation
+* Industrial control panels
+* Educational hardware interfacing
+* Weather stations
+* Security keypads and passcode entry
+* Custom macro keyboards
 
 ---
+## Included Examples
+
+| Example                | Description                                         |
+| ---------------------- | ----------------------------------------------------|
+| 01_Basic_Polling        | Continuously queries the board for button presses over Qwiic|
+| 02_Hardware_Interrupt     | Efficient, event-driven reading using the INT pin        |
+
+---
+
+## Documentation & Resources
+
+Additional resources are available through the PTSolns Documentation Repository, including:
+
+* Datasheets
+
+* Schematics
+
+* Pinout diagrams
+
+* 3D models
+
+* Fritzing files
+
+* Tutorials
+
+* Example projects
+
+* [PTSolns Documentation Repository](https://docs.ptsolns.com)
+
+* [PTSolns Website](https://ptsolns.com)
+
+* [Contact Support](https://ptsolns.com/contact-us)
+
+* [PTSolns IDE](https://ptsolns.com/ide)
